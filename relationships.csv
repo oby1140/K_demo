@@ -1,0 +1,123 @@
+source,target,type,source_citation,description
+system_ort_etcs,subsystem_zone_controller,HAS_SUBSYSTEM,RFP §3.5.2,
+system_ort_etcs,subsystem_avi_rfid,HAS_SUBSYSTEM,RFP §3.5.3,
+system_ort_etcs,subsystem_ves,HAS_SUBSYSTEM,RFP §3.5.4,
+system_ort_etcs,subsystem_avdc,HAS_SUBSYSTEM,RFP §3.5.5,
+system_ort_etcs,subsystem_dvas,HAS_SUBSYSTEM,RFP §3.5.6,
+system_ort_etcs,subsystem_ups,HAS_SUBSYSTEM,RFP §3.5.7,
+system_ort_etcs,component_tfh,INCLUDES_COMPONENT,RFP §3.6.5,Central processing component
+subsystem_zone_controller,req_17,IMPLEMENTS_REQUIREMENT,RFP §3.5.1,Redundancy
+subsystem_zone_controller,req_36,IMPLEMENTS_REQUIREMENT,RFP §3.5.1.3,Time Synchronization
+subsystem_zone_controller,data_type_configuration_file,HANDLES_DATA_TYPE,RFP §3.5.1,Uses configuration files
+subsystem_zone_controller,standard_ntp,COMPLIES_WITH,RFP §3.5.1,For time synchronization
+subsystem_avi_rfid,req_42,IMPLEMENTS_REQUIREMENT,RFP §3.5.3,Supports multiple protocols
+subsystem_avi_rfid,standard_tdm,COMPLIES_WITH,RFP §3.5.3,Supported protocol
+subsystem_avi_rfid,standard_6c,COMPLIES_WITH,RFP §3.5.3,Supported protocol
+subsystem_avi_rfid,standard_sego,COMPLIES_WITH,RFP §3.5.3,Supported protocol
+subsystem_ves,req_50,IMPLEMENTS_REQUIREMENT,RFP §3.5.3,Specifies image format
+subsystem_ves,standard_jpeg,COMPLIES_WITH,RFP §3.5.3,Uses JPEG format
+subsystem_ves,data_type_image,HANDLES_DATA_TYPE,RFP §3.5.4,Captures and stores images
+subsystem_dvas,req_79,IMPLEMENTS_REQUIREMENT,RFP §3.5.6,Historical storage requirement
+subsystem_dvas,data_type_video,HANDLES_DATA_TYPE,RFP §3.5.6,Stores video data
+subsystem_dvas,data_type_transaction,HANDLES_DATA_TYPE,RFP §3.5.6,Associates video with transactions
+subsystem_dvas,standard_avi,COMPLIES_WITH,RFP §3.5.6,Export format
+subsystem_dvas,standard_mp4,COMPLIES_WITH,RFP §3.5.6,Export format
+subsystem_dvas,standard_mov,COMPLIES_WITH,RFP §3.5.6,Export format
+subsystem_ups,location_rmta_facilities,INTEGRATES_WITH,RFP §3.1.2,RMTA standby generators
+component_tfh,req_24,IMPLEMENTS_REQUIREMENT,RFP §1.1.1.1,Local storage
+component_tfh,req_105,IMPLEMENTS_REQUIREMENT,RFP §3.6.1,RMTA user interface
+component_tfh,req_111,IMPLEMENTS_REQUIREMENT,RFP §3.6.1,Audit and Reconciliation tools
+component_tfh,req_147,IMPLEMENTS_REQUIREMENT,RFP §3.6.5,Storage solution
+component_tfh,data_type_transaction,HANDLES_DATA_TYPE,RFP §3.6.5,Processes transaction data
+component_tfh,data_type_image,HANDLES_DATA_TYPE,RFP §3.6.5,Stores image files
+component_tfh,data_type_configuration_file,HANDLES_DATA_TYPE,RFP §3.6.5,Stores configuration files
+component_tfh,data_type_toll_rates,HANDLES_DATA_TYPE,RFP §3.6.5,Stores toll rates
+component_tfh,data_type_tvl,HANDLES_DATA_TYPE,RFP §3.6.5,Stores TVL files
+component_tfh,data_type_executable_files,HANDLES_DATA_TYPE,RFP §3.6.5,Stores executable files
+component_tfh,data_type_system_logs,HANDLES_DATA_TYPE,Appendix I,Stores system logs
+component_tfh,data_type_moms_data,HANDLES_DATA_TYPE,Appendix I,Stores MOMS data
+component_tfh,sla_av2,SUPPORTS_SLA,Appendix E §3.2,Availability target for TFH applications
+req_137,subsystem_zone_controller,RELATES_TO,RFP §3.6.3,Messaging requirement
+req_137,subsystem_ves,RELATES_TO,RFP §3.6.3,Messaging requirement
+req_137,subsystem_avi_rfid,RELATES_TO,RFP §3.6.3,Messaging requirement
+req_137,component_tfh,RELATES_TO,RFP §3.6.3,Messaging requirement
+req_137,standard_xml,COMPLIES_WITH,RFP §3.6.3,Open protocol example
+req_137,standard_sftp,COMPLIES_WITH,RFP §3.6.3,Open protocol example
+req_137,standard_snmp,COMPLIES_WITH,RFP §3.6.3,Open protocol example
+req_138,component_tfh,RELATES_TO,RFP §3.6.4.1,Interface to VDOT E-ZPass CSC
+system_ort_etcs,organization_vdot_csc,INTERFACES_WITH,RFP §3.1.1,Transaction and data exchange
+organization_tsi,organization_rmta,CONTRACTS_WITH,Contract,Electronic Toll Collection System
+organization_tsi,organization_vdot_csc,INTERFACES_WITH,RFP §3.1.1,For system integration and data exchange
+document_rfp,document_appendix_e,HAS_APPENDIX,,Service Level Agreement Requirements
+document_rfp,document_appendix_j,HAS_APPENDIX,,Project Deliverable Schedule
+document_rfp,document_appendix_k,HAS_APPENDIX,,VDOT ICDs
+document_appendix_k,document_vdot_icd_specs,DETAILS,,Interface specifications for Black Box
+document_appendix_k,document_iag_recon_spec,DETAILS,,Interface specifications for IAG Reconciliation
+document_appendix_k,document_toll_corr_spec,DETAILS,,Interface specifications for Toll Corrections
+document_appendix_k,document_vtoll_int_spec,DETAILS,,Interface specifications for VTOLL
+document_vdot_icd_specs,standard_xml,USES_STANDARD,VDOT Black Box Spec,XML data format
+document_vdot_icd_specs,standard_sftp,USES_STANDARD,VDOT Black Box Spec,FTPS file transfer
+document_iag_recon_spec,standard_xml,USES_STANDARD,IAG Recon Spec,XML data format
+document_iag_recon_spec,standard_sftp,USES_STANDARD,IAG Recon Spec,FTPS file transfer
+document_toll_corr_spec,standard_xml,USES_STANDARD,Toll Corr Spec,XML data format
+document_toll_corr_spec,standard_sftp,USES_STANDARD,Toll Corr Spec,FTPS file transfer
+document_vtoll_int_spec,standard_xml,USES_STANDARD,VTOLL Spec,XML data format
+document_vtoll_int_spec,standard_sftp,USES_STANDARD,VTOLL Spec,FTPS file transfer
+document_vdot_icd_specs,data_type_avi_transaction,DEFINES_FORMAT,VDOT Black Box Spec §3,
+document_vdot_icd_specs,data_type_tag_status_file,DEFINES_FORMAT,VDOT Black Box Spec §4,
+document_vdot_icd_specs,data_type_tag_status_update_file,DEFINES_FORMAT,VDOT Black Box Spec §5,
+document_vdot_icd_specs,data_type_toll_recon_file,DEFINES_FORMAT,VDOT Black Box Spec §6,TRECON.XML
+document_iag_recon_spec,data_type_iag_recon_file,DEFINES_FORMAT,IAG Recon Spec §2,IRECON.XML
+document_toll_corr_spec,data_type_toll_corr_file,DEFINES_FORMAT,Toll Corr Spec §2,TCR.XML
+document_toll_corr_spec,data_type_toll_corr_recon_file,DEFINES_FORMAT,Toll Corr Spec §3,TCR Reconciliation XML
+document_vtoll_int_spec,data_type_transaction_file,DEFINES_FORMAT,VTOLL Spec §2,Transaction File (Invalid Tags)
+document_vtoll_int_spec,data_type_transaction_recon_file,DEFINES_FORMAT,VTOLL Spec §3,Transaction Reconciliation File
+document_vtoll_int_spec,data_type_vtoll_file,DEFINES_FORMAT,VTOLL Spec §4,VTOLL File (License Plates)
+document_vtoll_int_spec,data_type_vtoll_recon_file,DEFINES_FORMAT,VTOLL Spec §5,VTOLL Reconciliation File
+system_ort_etcs,organization_rmta,OWNED_BY,Contract,Richmond Metropolitan Transportation Authority
+system_ort_etcs,organization_tsi,PROVIDED_BY,Contract,Toll System Integrator
+document_rfp,document_rfp_section_3_5_2,HAS_SECTION,,Details on Zone Controller Subsystem
+document_rfp,document_rfp_section_3_5_6,HAS_SECTION,,Details on Digital Video Audit System
+subsystem_zone_controller,document_rfp_section_3_5_2,DESCRIBED_IN,RFP §3.5.2,
+subsystem_dvas,document_rfp_section_3_5_6,DESCRIBED_IN,RFP §3.5.6,
+req_17,document_rfp,SPECIFIED_IN,RFP §3.5.1,Table 12
+req_50,document_rfp,SPECIFIED_IN,RFP §3.5.3,Table 13
+sla_availability,document_appendix_e,SPECIFIED_IN,Appendix E,General requirement
+sla_av2,document_appendix_e,SPECIFIED_IN,Appendix E §3.2,Specific availability target
+req_147,document_data_retention,REFERENCES,RFP §3.6.5,Follows guidelines
+system_ort_etcs,standard_us_customary,COMPLIES_WITH,RFP §3.2.1,Units of measure
+system_ort_etcs,standard_english_numbers,COMPLIES_WITH,RFP §3.2.1,Number formatting
+activity_acceptance_testing,activity_fat,HAS_PHASE,RFP §3.10,
+activity_acceptance_testing,activity_fsiit,HAS_PHASE,RFP §3.10,
+activity_acceptance_testing,activity_sict,HAS_PHASE,RFP §3.10,
+activity_acceptance_testing,activity_sat,HAS_3.10,
+organization_tsi,document_pmp,GENERATES,RFP §3.7,Required Deliverable
+organization_tsi,document_sddd,GENERATES,RFP §3.8.3,Required Deliverable
+organization_tsi,document_rtm,GENERATES,RFP §3.8.2,Required Deliverable
+organization_tsi,document_transition_plan,GENERATES,RFP §3.4.1,Required Deliverable
+organization_tsi,document_fsiit_plan,GENERATES,RFP §3.10.2.1,Required Deliverable
+organization_tsi,document_sict_plan,GENERATES,RFP §3.10.6,Required Deliverable
+organization_tsi,document_sat_plan,GENERATES,RFP §3.10.8,Required Deliverable
+document_rtm,req_17,TRACES_REQUIREMENT,RFP §3.8.2,Documents traceability (example)
+system_ort_etcs,location_roadside,LOCATED_AT,RFP §3.1.1,System components at roadside
+system_ort_etcs,location_toll_zone,LOCATED_AT,RFP §3.5,System is installed at toll zones
+system_ort_etcs,location_powhite_parkway,LOCATED_AT,RFP §2.3,Site for pre-proposal conference and system components
+system_ort_etcs,location_downtown_expressway,LOCATED_AT,RFP §3.1.2,Site for system components
+component_tfh,location_rmta_facilities,LOCATED_AT,RFP §3.6.5,Option for on-site TFH
+component_tfh,location_cloud,LOCATED_AT,RFP §3.6.5,Option for cloud-based TFH and DR
+organization_tsi,location_tsi_test_facility,USES_LOCATION,RFP §2.12.1,Potential site for FAT
+document_data_retention,data_type_image,SPECIFIES_RETENTION_FOR,Appendix I Table 1,
+document_data_retention,data_type_transaction,SPECIFIES_RETENTION_FOR,Appendix I Table 1,
+document_data_retention,data_type_video,SPECIFIES_RETENTION_FOR,Appendix I Table 1,
+document_data_retention,data_type_configuration_file,SPECIFIES_RETENTION_FOR,Appendix I Table 1,
+document_data_retention,data_type_system_logs,SPECIFIES_RETENTION_FOR,Appendix I Table 1,
+document_data_retention,data_type_moms_data,SPECIFIES_RETENTION_FOR,Appendix I Table 1,
+system_ort_etcs,system_aet_etcs,CAN_TRANSITION_TO,RFP §3.13.7,Future conversion possibility
+activity_aet_conversion,system_ort_etcs,CONVERTS_FROM,RFP §3.13.7,Process converts ORT
+activity_aet_conversion,system_aet_etcs,CONVERTS_TO,RFP §3.13.7,Process results in AET
+activity_aet_conversion,document_aet_conversion_plan,GENERATES,RFP §3.13.4.3,Required Deliverable
+activity_aet_conversion,document_aet_as_built,GENERATES,RFP §3.13.4.6,Required Deliverable
+system_ort_etcs,activity_acceptance_testing,PART_OF,,Overall testing for the system
+system_ort_etcs,phase_warranty,HAS_PHASE,Glossary,First year of operation support
+activity_project_management,system_ort_etcs,MANAGES,RFP §3.7,Management covers the system project
+component_tfh,data_type_transaction_events,HANDLES_DATA_TYPE,RFP §1.1.1.1,Stores events
