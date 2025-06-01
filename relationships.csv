@@ -1,4 +1,4 @@
-source,:target,type,source_citation,description
+source,target,type,source_citation,description
 system_ort_etcs,subsystem_zone_controller,HAS_SUBSYSTEM,RFP §3.5.2,
 system_ort_etcs,subsystem_avi_rfid,HAS_SUBSYSTEM,RFP §3.5.3,
 system_ort_etcs,subsystem_ves,HAS_SUBSYSTEM,RFP §3.5.4,
